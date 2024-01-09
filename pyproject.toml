@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "bitlypy"
+version = "0.1.0"
+description = "Simple Url shortener API in python using flask and sqlite"
+authors = ["Chritopher Guay <christo1771@gmail.com>"]
+license = "GPL"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sqids = "^0.4.1"
+sqlalchemy = {extras = ["sqlite"], version = "^2.0.25"}
+flask = "^3.0.0"
+python-dotenv = "^1.0.0"
+flask-sqlalchemy = "^3.1.1"
+flask-migrate = "^4.0.5"
+result = "^0.16.0"
+pydantic = "^2.5.3"
+pytest = "^7.4.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
