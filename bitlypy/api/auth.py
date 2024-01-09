@@ -22,8 +22,9 @@ def auth_required(view):
             match maybe_user_id:
                 case Ok(user_id):
                     g.user_id = user_id
+                    return view(**kwargs)
                 case Err(_):
-                    return abort(401, "Unauthorized")
-        return view(**kwargs)
+                    pass
+        return abort(401, "Unauthorized")
 
     return wrapped_view

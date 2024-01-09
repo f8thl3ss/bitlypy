@@ -6,3 +6,6 @@ run:
 
 test:
   python -m pytest tests/
+
+fmt:
+  ruff format
